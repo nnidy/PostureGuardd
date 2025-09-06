@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dahboard Analisis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="analyticsstyle.css" />
+    <script src="analyticsjs.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" id="menuToggle" class="menu-toggle" />
+    <div class="sidebar">
+        <label for="menuToggle" class="nav-logo">
+            <span>☰</span>
+        </label>
+        <div class="nav-menu">
+            <a href="../Homepage/index.html" class="nav-item"><span>🏠</span> Dashboard</a>
+            <a href="../Analytics/analytics.html" class="nav-item active"><span>📊</span> Analisis</a>
+            <a href="../AboutUs/aboutus.html" class="nav-item"><span>💡</span> Tentang Kami</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-title">
+            <h1>Dashboard Analisis</h1>
+        </div>
+        <div class="blur-background">
+            <div class="analytics-container">
+                <div class="analytics">
+                    <h2>Persentase Postur Duduk yang baik</h2>
+                    <h3>00%</h3>
+                </div>
+                <div class="analytics">
+                    <h2>Waktu Monitoring</h2>
+                    <h3>00 jam 00 menit</h3>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="chart-container">
+                    <img src="ChartAnalysis.png">
+                </div>
+                <div class="data-container">
+                    <h2>Hasil analisis</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Morbi malesuada accumsan ultricies. Duis erat
+                        lorem, placerat nec rutrum nec, sodales sed sapien.
+                        Mauris consectetur ante eget dui varius, ac congue
+                        nisi bibendum. Phasellus imperdiet sed risus a
+                        eleifend. Donec placerat dui vel feugiat suscipit.
+                        In hac habitasse platea dictumst. Curabitur odio
+                        nisi, maximus ut purus a, maximus ullamcorper est.
+                        Praesent lorem augue, fringilla in placerat dictum,
+                        efficitur sit amet velit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="upperdiv" id="upperdivid">
+        <h1>Kambing Soon 🐐</h1>
+        <a href="../Homepage/index.html" id="backButton">Kembali ke Dashboard Utama</a>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

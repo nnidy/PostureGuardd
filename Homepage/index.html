@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Posture Guard</title>
+  <!-- ini untuk import ai nya yas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.2.3/dist/ml5.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <input type="checkbox" id="menuToggle" class="menu-toggle" />
+  <div class="sidebar">
+    <label for="menuToggle" class="nav-logo">
+      <span>☰</span>
+    </label>
+    <div class="nav-menu">
+      <a href="../Homepage/index.html" class="nav-item active"><span>🏠</span> Dashboard</a>
+      <a href="../Analytics/analytics.html" class="nav-item"><span>📊</span> Analisis</a>
+      <a href="../AboutUs/aboutus.html" class="nav-item"><span>💡</span> Tentang Kami</a>
+    </div>
+  </div>
+
+  <div class="home-page">
+    <div class="header">
+      <h1>Dashboard Utama</h1>
+      <div class="top-right-container">
+        <div class="welcome-container">
+          <div class="welcome-message">Selamat Datang!!!</div>
+        </div>
+        <!-- <div class="notification-bell">🔔</div> -->
+      </div>
+    </div>
+    <div class="content-container">
+      <header>
+        <img class="logo" src="../Image/LogoBGwhite.jpeg" />
+        <p class="tagline">
+          -Membantu menjaga postur tubuh anda agar tetap baik-
+        </p>
+      </header>
+
+      <p class="instructions">Scroll untuk melihat cara penggunaan</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-title">1. Mengatur Posisi Default Postur Tubuh</div>
+          <div class="step-desc">
+            Klik tombol di bawah untuk membuka kamera dan mengatur posisi default. Ambil posisi duduk tegak yang nyaman
+            dan ambil foto.
+          </div>
+          <a href="../SetPosture/setposture.html">
+            <button class="camera-button">Atur Posisi Default</button>
+          </a>
+        </div>
+        <div class="step">
+          <div class="step-title">2. Jalankan Aplikasi Posture Guard</div>
+          <div class="step-desc">
+            Klik tombol buka kamera untuk menjalankan Posture Guard. PostureGuard akan berjalan di
+            background dan akan memberikan notifikasi jika postur tubuh tidak
+            baik. Jalankan aplikasi lainnya. PostureGuard akan berjalan di
+            background dan akan memberikan notifikasi jika postur tubuh tidak
+            baik
+          </div>
+          <button class="camera-button" id="aktifPostureGuard">Aktifkan Posture Guard</button>
+        </div>
+        <div class="step">
+          <div class="step-title">3. Matikan Aplikasi Posture Guard</div>
+          <div class="step-desc">
+            Klik tombol tutup kamera untuk menutup Posture Guard. PostureGuard akan berhenti.
+          </div>
+          <button class="camera-button" id="nonaktifPostureGuard">Nonaktifkan Posture Guard</button>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container1 footer-container">
+        <p class="footer-text">
+          &copy; 2025 PostureGuard. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <script src="homepage.js"></script>
+
+  <audio id="audioElement">
+    <source src="../Homepage/Assets/alarm.mp3" preload="auto" type="audio/mp3" />
+  </audio>
+</body>
+
+</html>

@@ -1,0 +1,392 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Styling body dan video */
+body {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  /* background: radial-gradient(circle, #00ff7f, #121212); */
+  background-color: #121212;
+  background-image: radial-gradient(circle at 1px 1px, #333 1px, transparent 0);
+  background-size: 20px 20px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  background-color: #2D2D2D;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.header h1 {
+  color: #fff;
+  margin-left: 150px;
+  /* Pusatkan judul */
+  width: fit-content;
+}
+
+/* .main-content {
+  background-color: #2D2D2D;
+  width: 650px;
+  height: 430px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* Tambahkan padding */
+/* height: auto; */
+/* Ubah dari fixed height ke auto */
+/* min-height: 480px; */
+/* }  */
+
+/* #maincontenth1 {
+  color: #fff;
+  margin-top: 10px;
+  padding-bottom: 15px;
+} */
+
+/* Perbaiki container dan ukuran konsisten */
+/* .camera-container {
+  position: relative;
+  width: 600px;
+  background-color: #2D2D2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  /* Kurangi tinggi kamera */
+/* margin-top: 15px; */
+/* Tambahkan jarak dari judul */
+/* overflow: hidden;
+} */
+/* video {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  /* Or specific height */
+/* max-height: 300px;
+} */
+
+/* video,
+#capturedImage {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  transform: scaleX(-1);
+  object-fit: cover;
+  margin-top: 25px;
+
+} */
+
+/* #capturedImage.hidden {
+  display: none;
+  /* Ensure it's not taking up space when hidden */
+/* } */
+
+/* Styling untuk heading overlay */
+.main-content h1 {
+  margin-top: 25px;
+  /* margin-bottom: 10px; */
+  /* kasih jarak antara h1 dan video */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  /* text-shadow: 0px -2px 25px rgba(0, 0, 0, 0.8); */
+  margin-bottom: 20px;
+  /* Perbesar jarak bawah judul */
+  width: 100%;
+}
+
+/* .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+
+} */
+
+.main-content {
+  position: relative;
+  background-color: #2D2D2D;
+  width: 650px;
+  min-height: 430px;
+  /* Changed from fixed height to min-height */
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  /* This includes padding in width/height calculations */
+}
+
+.camera-container {
+  position: absolute;
+  width: 600px;
+  background-color: #2D2D2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 45px;
+  margin-bottom: 20px;
+  /* Added to create space for buttons */
+}
+
+.button-container {
+  margin-top: 20px;
+  /* Space between camera and buttons */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Space between buttons */
+}
+
+video,
+#capturedImage {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  /* Prevent exceeding container */
+  background-color: #000;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  transform: scaleX(-1);
+  object-fit: cover;
+  /* Removed margin-top to prevent overflow */
+}
+
+.hidden {
+  display: none;
+}
+
+/* Styling untuk tombol overlay */
+button {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 15px;
+  padding: 15px 40px;
+  border: none;
+  background-color: #4ade80;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 60px;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #00cc66;
+}
+
+#toggleCamera,
+#capture {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 15px;
+  padding: 15px 40px;
+  border: none;
+  background-color: #4ade80;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 60px;
+  white-space: nowrap;
+}
+
+/* Tombol toggle hover */
+#toggleCamera:hover,
+#capture:hover {
+  background-color: #00cc66;
+}
+
+#camera-off-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#backButton {
+  padding: 0;
+  margin-left: 20px;
+  width: 60px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 30px;
+}
+
+#backButton span {
+  display: none;
+}
+
+#backButton:hover {
+  width: 110px;
+  border-radius: 15px;
+  background-color: #00cc66;
+  justify-content: flex-start;
+}
+
+#backButton:hover span {
+  display: inline;
+  font-size: 1rem;
+  margin-left: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.detail-container {
+  margin-block: 25px;
+  background-color: #2D2D2D;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.detail-container p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.detail-container h2 {
+  margin: 0;
+  margin-bottom: 5px;
+
+}
+
+.process-scan {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #4ade80;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.process-scan h1 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.process-scan button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: #000;
+  color: #4ade80;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.process-scan button:hover {
+  background-color: #222;
+}
+
+#closeProcess {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 15px;
+  padding: 15px 40px;
+  border: none;
+  background-color: #4ade80;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 60px;
+  white-space: nowrap;
+}
+
+#closeProcess:hover {
+  background-color: #00cc66;
+}
+
+/* .capture-preview {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 160px;
+  height: 120px;
+  border: 2px solid #00ff7f;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 127, 0.6);
+  z-index: 999;
+} */
+
+#capturedImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* penuh container */
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  /* mirror agar tampak seperti video */
+  border-radius: 12px;
+  border: 2px solid #fff;
+  display: none;
+  z-index: 10;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#camera {
+  transform: scaleX(-1);
+}

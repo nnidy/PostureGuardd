@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camera Page</title>
+  <!-- ini untuk import ai nya yas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.2.3/dist/ml5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="setposture.css" />
+</head>
+
+<body>
+  <div class="header">
+    <button id="backButton">←<span>Back</span></button>
+    <h1>Atur Posisi Default</h1>
+  </div>
+  <div class="main-content">
+    <!-- <h1 id="maincontenth1">Set Default Posture</h1> -->
+    <div class="camera-container">
+      <video id="camera" autoplay playsinline></video>
+      <img id="capturedImage" class="hidden" />
+      <div id="camera-off-message" style="display: none">
+        Kamera mati, nyalakan kamera untuk melanjutkan.
+      </div>
+      <div class="button-container">
+        <button id="toggleCamera">📷 Buka kamera</button>
+        <button id="capture">Atur posisi</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-container">
+    <h2>Petunjuk</h2>
+    <p>Buka kamera : Untuk membuka kamera. Lihat pada layar, pastikan posisi anda sudah sesuai dan nyaman.</p>
+    <p>Atur posisi : Untuk mengatur posisi default pendeteksian</p>
+  </div>
+
+  <!-- <div class="process-scan">
+    <div class="process-content">
+      <h1>Posture is set as default successfully.</h1>
+      <button id="closeProcess">Close</button>
+    </div>
+  </div> -->
+
+  <script src="../Homepage/homepage.js"></script>
+  <script src="setposture.js"></script>
+  <!-- Menghubungkan JS -->
+</body>
+
+</html>
